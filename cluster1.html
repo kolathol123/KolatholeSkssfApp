@@ -1,0 +1,73 @@
+<!Doctype html>
+<html lang="en">
+<head>
+      <script src='file:///android_asset/app.js'></script>
+<script src='cluster.js'></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title></title>
+  <meta name="author" content="Digital-Technology-Solutions">
+
+  <link rel="stylesheet" href="cluster.css">
+
+</head>
+<style type="text/css">
+
+</style>
+<body>
+  <!-- your content here... -->
+  
+<div id="top-bar" >
+<!--
+<div id="menu" >
+
+<svg width="32" height="32" fill="currentColor" class="bi-list" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+    </svg>
+    </div>
+    -->
+    <div id="title-bar"></div>
+  </div>
+ 
+<div class="content-div" id="main-list" >
+<script>
+  var qs = decodeURIComponent(window.location.search); //parsing 
+  qs= qs.substring(1); 
+  var q = qs.split("&"); 
+  
+  display_cluster(q[0]);
+
+</script>
+<!---
+	<div class="cluster" >
+		<div class="position">President</div>
+		<div class="name">Ahmad kabeer</div>
+		<div class="contact">
+			<div class="phone" onclick="call(1)">
+			<img src="phone.svg">
+			</div>
+			<div id="n1" class="number">9539922004</div>
+			<div class="whatsapp" onclick="msg(1)">
+			<img src="whatsapp.svg">
+			</div>
+		</div>
+	</div>
+    -->
+</div>
+ <script type="text/javascript">
+ function call(num)
+ {
+   var pn=document.getElementById("n"+num).innerHTML;
+   app.Call(pn);
+ }
+ 
+ function msg(num)
+ {
+  var pn=document.getElementById("n"+num).innerHTML;
+  var url = "whatsapp://send?text=" + encodeURI("Hi") + "&phone=" + pn;
+  app.OpenUrl(url);
+ }
+ </script>
+</body>
+</html>
