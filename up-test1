@@ -6,7 +6,7 @@ function OnStart()
 	lay = app.CreateLayout( "linear", "VCenter,FillXY" );	
 
 	//Create a text label and add it to layout.
-	txt = app.CreateText( "Hello" );
+	txt = app.CreateText( "Hello World" );
 	txt.SetTextSize( 32 );
 	lay.AddChild( txt );
 	
