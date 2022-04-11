@@ -28,3 +28,16 @@ function open_drawer()
    app.OpenDrawer();
   
 }
+
+function openc(num)
+ {
+   var myurl="cluster"+1+".html?"+num;
+   window.location=myurl;
+ }
+ 
+ function btn_hide(){
+ document.getElementById("alert").style.display="none";
+ 
+ 
+ }
+ 
